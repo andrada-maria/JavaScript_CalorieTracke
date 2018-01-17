@@ -1,0 +1,196 @@
+
+.produs-container{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.77);
+    border: 4px solid orange;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    width: 200px;
+    height: 80px;
+
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "name stergereAliment"
+            "cantitate ."
+            "calorii editareAliment"
+}
+
+/*.overlay {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*background-color: rgba(25, 143, 35, 0.34);*/
+    /*width: 300px;*/
+    /*height: 80px;*/
+/*}*/
+
+/* .image {
+    grid-area: image;
+    justify-self: center;
+    align-self: center;
+} */
+
+/* .image img{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+} */
+
+.name {
+    grid-area: name;
+    justify-self: center;
+    align-self: center;
+}
+
+.cantitate {
+    grid-area: cantitate;
+    justify-self: center;
+    align-self: center;
+}
+
+.calorii {
+    grid-area: calorii;
+    justify-self: center;
+    align-self: center;
+}
+
+.stergereAliment {
+    width: 23px;
+    height: 23px;
+    grid-area: stergereAliment;
+    background-color: #b52620;
+    color: white;
+    justify-self: right;
+    box-shadow: none;
+    border: 1px solid gray;
+}
+
+.stergereAliment:hover {
+    background-color: #98241e;
+}
+
+.stergereAliment:active {
+    background-color: #7f246a;
+}
+
+
+
+.editareAliment {
+    width: 23px;
+    height: 23px;
+    grid-area: editareAliment;
+    background-color: #199a23;
+    color: white;
+    align-self: end;
+    justify-self: right;
+    box-shadow: none;
+    border: 1px solid gray;
+}
+
+.editareAliment:hover {
+    background-color: #198f23;
+}
+
+
+.container {
+    background-image: url("https://i.pinimg.com/originals/6f/6f/cd/6f6fcda0a6fa5b48cae8f20896f5cb6f.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:
+            ". titlu produse ."
+            ". formular produse ."
+            ". fetch produse ."
+}
+
+#buton-get{
+    grid-area: fetch;
+}
+
+.titlu{
+    margin-top: 20px;
+    grid-area: titlu;
+    color: black;
+    font-size: 3em;
+    font-family: verdana;
+    font-weight: bold;
+    font-style: italic;
+}
+
+form {
+    grid-area: formular;
+    background-color: rgba(0, 0, 0, 0.77);
+    height: 200px;
+    padding: 20px;
+    align-self: center;
+    color:white;
+
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". l_nume i_nume ."
+        ". l_cant i_cant ."
+        ". l_cal i_cal ."
+        /* ". l_img i_img ." */
+        ". post_btn post_btn .";
+    grid-row-gap: 5px;
+}
+
+.l_nume {
+    grid-area: l_nume;
+}
+
+.l_cant {
+    grid-area: l_cant;
+}
+
+
+.l_cal {
+    grid-area: l_cal;
+}
+
+/* .l_img {
+    grid-area: l_img;
+} */
+
+#butonAdaugareAliment {
+    grid-area: post_btn;
+    background-color: #e0650d;
+    color: white;
+}
+
+#numeInput{
+    grid-area: i_nume;
+}
+
+#cantitateInput{
+    grid-area: i_cant;
+}
+
+#caloriiInput{
+    grid-area: i_cal;
+}
+
+/* #imagineInput{
+    grid-area: i_img;
+} */
+
+
+
+.alimente {
+    height: 500px;
+    overflow: auto;
+    grid-area: produse;
+    justify-self: center;
+    margin-top: 50px;
+    color:white;
+}
